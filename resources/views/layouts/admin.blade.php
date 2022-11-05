@@ -23,6 +23,7 @@
             document.getElementById('backdrop').classList.add('hidden');
         }
     </script>
+    @livewireStyles
 </head>
 
 <body class="bg-gray-100 text-gray-600">
@@ -270,6 +271,7 @@
             {{ $slot }}
         </main>
     </div>
+    @livewireScripts
 </body>
 
 </html>
