@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\WebSite\StoreController;
+use App\Http\Livewire\Admin\Stores\StoresCreate;
+use App\Http\Livewire\Admin\Stores\StoresList;
+use App\Http\Livewire\Admin\Stores\StoresUpdate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.home');
+    });
+
+    Route::prefix('stores')->group(function () {
+        Route::get('/', StoresList::class)->name('admin.stores');
+        Route::get('/create', StoresCreate::class)->name('admin.stores.create');
+        Route::get('/{store}/update', StoresUpdate::class)->name('admin.stores.update');
+    });
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

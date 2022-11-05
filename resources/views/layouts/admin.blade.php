@@ -83,18 +83,23 @@
                 </li>
 
                 <li class="hover:bg-blue-100 relative">
-                    <a href="#"
+                    <a href="{{ route('admin.stores') }}"
                         class="flex px-5 py-3 items-center w-full text-white hover:text-white hover:bg-blue-700">
                         <span aria-hidden="true">
-                            <svg class="text-white opacity-50" width="22" height="22" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1"></circle>
-                                <circle cx="20" cy="21" r="1"></circle>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-store opacity-50"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <line x1="3" y1="21" x2="21" y2="21"></line>
+                                <path
+                                    d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4">
+                                </path>
+                                <line x1="5" y1="21" x2="5" y2="10.85"></line>
+                                <line x1="19" y1="21" x2="19" y2="10.85"></line>
+                                <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"></path>
                             </svg>
                         </span>
-                        <span class="ml-3">Orders</span>
+                        <span class="ml-3">Stores</span>
                     </a>
                 </li>
 
